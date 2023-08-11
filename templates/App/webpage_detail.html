@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DetailView cls deals with dynamic url sufixes n uess canonical url forms to display data of selected object</h1>
+        <h1>Displaying Detail info of {{DOSWI.name}} webpage is </h1>
+    
+        <h2>Name of the webpage is {{DOSWI.name}} </h2>
+        <h2>URL of the webpage is {{DOSWI.url}} </h2>
+
+        <h1><a href="{% url 'WebpageUpdate' pk=DOSWI.pk %}" class="btn btn-success">Update Webpage</a></h1>
+        <h1><a href="{% url 'WebpageDelete' pk=DOSWI.pk %}" class="btn btn-warning">Delete Webpage</a></h1>
+        
+    </center>
+</body>
+</html>

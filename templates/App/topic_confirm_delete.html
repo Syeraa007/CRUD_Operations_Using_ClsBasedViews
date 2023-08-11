@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Deleting the Selected Instance</h1>
+        <h1>Are Sure..!! To Delete {{DOSTI.topic_name}}..??</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Sure, Delete.!">
+        </form>
+        <h1> <a href="{% url 'TopicList' %}">No, Back to List</a></h1>
+        <h1><a href="{% url 'TopicDetail' pk=DOSTI.pk %}">No, Back to Detail</a></h1>
+    </center>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DetailView cls deals with dynamic url sufixes n uess canonical url forms to display data of selected object</h1>
+        <h1>Displaying Detail info of {{DOSTI.topic_name}} topic is</h1>
+
+        <h2>Name of the topic is {{DOSTI.topic_name}} </h2>
+        <h2>Index of the topic is {{DOSTI.index}} </h2>
+        <h2>Location of the topic is {{DOSTI.locate}} </h2>
+<hr>
+        <h1>Webapges of {{DOSTI.topic_name}} are </h1>
+        <hr>
+        {% for page in DOSTI.Jelly.all %}
+            <h2>Name of Webpage is {{page.name}}</h2>
+            <h2>URL of webpage is {{page.url}}</h2>
+            <hr><br>
+        {% endfor %}
+
+        <h1><a href="{% url 'TopicUpdate' pk=DOSTI.pk %}" class="btn btn-success">Update Topic</a></h1>
+        <h1><a href="{% url 'TopicDelete' pk=DOSTI.pk %}" class="btn btn-warning">Delete Topic</a></h1>
+        
+    </center>
+</body>
+</html>
